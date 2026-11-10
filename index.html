@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nº91 – Porsche 911 GT3 R</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;700&family=Barlow+Condensed:ital,wght@1,800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="pre">
+  <div class="shut t"></div><div class="shut b"></div>
+  <div id="pc">
+    <img id="crest" src="https://images.seeklogo.com/logo-png/16/1/porsche-logo-png_seeklogo-168544.png" alt="Porsche crest" referrerpolicy="no-referrer">
+    <div id="pw">Nº91 · GT3 R</div>
+    <div id="pbar"><i></i></div>
+    <span id="pn">000</span>
+    <span id="pm" style="color:var(--mut);font-size:.85rem;text-align:center;max-width:22rem"></span>
+  </div>
+</div>
+<header>
+  <a class="logo" href="#top"><img src="https://images.seeklogo.com/logo-png/16/1/porsche-logo-png_seeklogo-168544.png" alt="Porsche" referrerpolicy="no-referrer">Nº91</a>
+  <nav><a href="#aero">Aero</a><a href="#livery">Livery</a><a href="#anatomy">Anatomy</a><a href="#cockpit">Cockpit</a><a href="#specs">Specs</a><a href="#grid">Grid</a></nav>
+</header>
+<div id="big" aria-hidden="true">91</div>
+<canvas id="gl" aria-label="3D Porsche 911 GT3 R"></canvas>
+<div id="rail"><i id="bar"></i></div>
+<div id="hud"><b id="kmh">000</b><small>km/h</small></div>
+<button id="snd" data-on="false" aria-label="Toggle sound"><i><b></b><b></b><b></b></i><span>Sound · tap to enable</span></button>
+<aside id="info" aria-live="polite">
+  <button id="ix" aria-label="Close part info">×</button>
+  <small id="ik">Body</small>
+  <h3 id="it">Part</h3>
+  <p id="id"></p>
+  <dl id="is"></dl>
+</aside>
+<div id="cabui"><button class="btn" id="exit">Exit cockpit</button><button class="btn ghost" id="go2">Launch</button><small>Move the mouse to look around · Esc to exit</small></div>
+
+<main id="track">
+  <section class="panel hero" id="top"><div>
+    <h1><span class="m"><span class="l">Number 91.</span></span></h1>
+    <p class="m"><span class="l">Porsche 911 GT3 R, LMGT3. Scroll to drive it around.</span></p>
+  </div></section>
+
+  <section class="panel" id="aero"><div>
+    <h2><span class="m"><span class="l">Air is the</span></span><span class="m"><span class="l">real engine.</span></span></h2>
+    <p class="m"><span class="l">Wing, splitter and diffuser turn speed into grip. The faster it goes, the harder it sticks to the road.</span></p>
+  </div></section>
+
+  <section class="panel r" id="livery"><div>
+    <h2><span class="m"><span class="l">Pick a finish.</span></span><span class="m"><span class="l">Not just a colour.</span></span></h2>
+    <div class="sw" role="group" aria-label="Paint finish">
+      <button style="--c:#ffc400" data-c="#ffc400" aria-label="Sun yellow, original livery" aria-pressed="true"></button>
+      <button style="--c:#4aa3ff" data-c="#4aa3ff" aria-label="Night blue, metallic" aria-pressed="false"></button>
+      <button style="--c:#e10600" data-c="#e10600" aria-label="Signal red, candy pearl" aria-pressed="false"></button>
+      <button style="--c:#e9e9e4" data-c="#e9e9e4" aria-label="Ghost white, satin" aria-pressed="false"></button>
+    </div>
+    <p class="m"><span class="l" id="fin">Sun Yellow · Original livery</span></p>
+  </div></section>
+
+  <section class="panel" id="anatomy"><div>
+    <h2><span class="m"><span class="l">Every part,</span></span><span class="m"><span class="l">in its place.</span></span></h2>
+    <p class="m"><span class="l">Watch the GT3 R come apart and lock back together, panel by panel. Click any part to pull it out and read about it.</span></p>
+    <span class="m" style="margin-top:1.6rem;padding:6px"><span class="l"><button class="btn" id="ex" style="margin:0">Disassemble</button></span></span>
+  </div></section>
+
+  <section class="panel r" id="cockpit"><div>
+    <h2><span class="m"><span class="l">Step inside.</span></span><span class="m"><span class="l">Take the seat.</span></span></h2>
+    <p class="m"><span class="l">The camera slides in through the driver’s side and settles behind the wheel. Move the mouse to look around.</span></p>
+    <span class="m" style="margin-top:1.6rem;padding:6px"><span class="l"><button class="btn" id="enter" style="margin:0">Enter cockpit</button></span></span>
+  </div></section>
+
+  <section class="panel" id="specs"><div>
+    <h2><span class="m"><span class="l">Flat-six,</span></span><span class="m"><span class="l">hung out back.</span></span></h2>
+    <dl class="m"><div class="l" style="display:block">
+      <div><dt>Engine</dt><dd>4.2 L flat-six</dd></div>
+      <div><dt>Layout</dt><dd>Rear engine, RWD</dd></div>
+      <div><dt>Class</dt><dd>LMGT3</dd></div>
+      <div><dt>Car</dt><dd>#91</dd></div>
+    </div></dl>
+  </div></section>
+
+  <section class="panel" id="grid" style="justify-content:center;text-align:center"><div style="display:flex;flex-direction:column;align-items:center">
+    <h2><span class="m"><span class="l">Lights out.</span></span></h2>
+    <button class="btn" id="go">Launch</button>
+  </div></section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
